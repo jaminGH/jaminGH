@@ -1,0 +1,1031 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_tq6stt6tcg';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":16};</script>
+  
+  <title>
+    hexo-theme-reimu效果展示(fork) |
+    
+    Jamin`blog
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="hexo-theme-reimu效果展示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-theme-reimu效果展示(fork)">
+<meta property="og:url" content="http://blog.pipbest.com/2024/11/29/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/index.html">
+<meta property="og:site_name" content="Jamin`blog">
+<meta property="og:description" content="hexo-theme-reimu效果展示">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png">
+<meta property="og:image" content="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png">
+<meta property="og:image" content="https://d-sketon.top/img/backwebp/bg1.webp">
+<meta property="og:image" content="http://blog.pipbest.com/images/anime.webp">
+<meta property="og:image" content="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png">
+<meta property="article:published_time" content="2024-11-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-02T13:24:58.772Z">
+<meta property="article:author" content="makki">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="测试内容">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="Jamin`blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+    
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">首页</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">归档</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">关于</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">友链</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/bangumis">追番</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" target="_blank"></a>
+    
+    
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索"></a>
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/images/anime.webp" alt="hexo-theme-reimu效果展示(fork)">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">hexo-theme-reimu效果展示(fork)</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main"><article id="post-hexo-theme-reimu效果展示" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <a href="/2024/11/29/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-11-29T16:00:00.000Z" itemprop="datePublished">2024-11-30</time>
+    <time style="display: none;" id="post-update-time">2025-10-02</time>
+  </a>
+</div>
+
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9/" data-aos="zoom-in">测试内容</a>
+  </div>
+
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <h1 id="以下内容来自reimu主题作者D-Sketon"><a href="#以下内容来自reimu主题作者D-Sketon" class="headerlink" title="以下内容来自reimu主题作者D-Sketon"></a>以下内容来自reimu主题作者D-Sketon</h1><!-- 文章链接：[https://d-sketon.github.io/20240114/hexo-theme-reimu-content/](https://d-sketon.github.io/20240114/hexo-theme-reimu-content/) -->
+<div class="post-link-card-wrap">
+    <div class="post-link-card">
+      <a href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/" title="文章链接：hexo-theme-reimu效果展示" rel="noopener external nofollow noreferrer" target="_blank"></a>
+      <div class="post-link-card-cover-wrap"><img src="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png" class="no-lightbox" title="文章链接：hexo-theme-reimu效果展示" alt="文章链接：hexo-theme-reimu效果展示"/></div>
+      <div class="post-link-card-item-wrap">
+        <div class="post-link-card-title">文章链接：hexo-theme-reimu效果展示</div>
+        <div class="post-link-card-excerpt"><span class="icon-link"></span>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</div>
+      </div>
+    </div>
+  </div>
+
+<!-- 原始代码实现：[https://github.com/D-Sketon/reimu-playground/blob/main/source/_posts/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.md](https://github.com/D-Sketon/reimu-playground/blob/main/source/_posts/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.md) -->
+<div class="post-link-card-wrap">
+    <div class="post-link-card">
+      <a href="https://github.com/D-Sketon/reimu-playground/blob/main/source/_posts/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.md" title="原始代码实现：hexo-theme-reimu效果展示" rel="noopener external nofollow noreferrer" target="_blank"></a>
+      <div class="post-link-card-cover-wrap"><img src="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png" class="no-lightbox" title="原始代码实现：hexo-theme-reimu效果展示" alt="原始代码实现：hexo-theme-reimu效果展示"/></div>
+      <div class="post-link-card-item-wrap">
+        <div class="post-link-card-title">原始代码实现：hexo-theme-reimu效果展示</div>
+        <div class="post-link-card-excerpt"><span class="icon-link"></span>https://github.com/D-Sketon/reimu-playground/blob/main/source/_posts/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.md</div>
+      </div>
+    </div>
+  </div>
+
+<p>你可以在以上内容找到本文原始来源及原始代码，本文置于本博客仅为提供作者编写时样式参考</p>
+<h2 id="Markdown-基本元素"><a href="#Markdown-基本元素" class="headerlink" title="Markdown 基本元素"></a>Markdown 基本元素</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="Definition-List-dl"><a href="#Definition-List-dl" class="headerlink" title="Definition List (dl)"></a>Definition List (dl)</h4><dl><dt>Definition List Title</dt><dd>This is a definition list division.</dd></dl>
+
+<h4 id="Ordered-List-ol"><a href="#Ordered-List-ol" class="headerlink" title="Ordered List (ol)"></a>Ordered List (ol)</h4><ol>
+<li>List Item 1</li>
+<li>List Item 2</li>
+<li>List Item 3</li>
+</ol>
+<h4 id="Unordered-List-ul"><a href="#Unordered-List-ul" class="headerlink" title="Unordered List (ul)"></a>Unordered List (ul)</h4><ul>
+<li>List Item 1</li>
+<li>List Item 2</li>
+<li>List Item 3</li>
+</ul>
+<h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>Lorem ipsum dolor sit amet, <a href="">test link</a> consectetur adipiscing elit. <strong>Strong text</strong> pellentesque ligula commodo viverra vehicula. <em>Italic text</em> at ullamcorper enim. Morbi a euismod nibh. <u>Underline text</u> non elit nisl. <del>Deleted text</del> tristique, sem id condimentum tempus, metus lectus venenatis mauris, sit amet semper lorem felis a eros. Fusce egestas nibh at sagittis auctor. Sed ultricies ac arcu quis molestie. Donec dapibus nunc in nibh egestas, vitae volutpat sem iaculis. Curabitur sem tellus, elementum nec quam id, fermentum laoreet mi. Ut mollis ullamcorper turpis, vitae facilisis velit ultricies sit amet. Etiam laoreet dui odio, id tempus justo tincidunt id. Phasellus scelerisque nunc sed nunc ultricies accumsan.</p>
+<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. <code>Sed erat diam</code>, blandit eget felis aliquam, rhoncus varius urna. Donec tellus sapien, sodales eget ante vitae, feugiat ullamcorper urna. Praesent auctor dui vitae dapibus eleifend. Proin viverra mollis neque, ut ullamcorper elit posuere eget.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+<p>Maecenas ornare arcu at mi suscipit, non molestie tortor ultrices. Aenean convallis, diam et congue ultricies, erat magna tincidunt orci, pulvinar posuere mi sapien ac magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent vitae placerat mauris. Nullam laoreet ante posuere tortor blandit auctor. Sed id ligula volutpat leo consequat placerat. Mauris fermentum dolor sed augue malesuada sollicitudin. Vivamus ultrices nunc felis, quis viverra orci eleifend ut. Donec et quam id urna cursus posuere. Donec elementum scelerisque laoreet.</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
+<thead>
+<tr>
+<th>Table Header 1</th>
+<th>Table Header 2</th>
+<th>Table Header 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<h3 id="其他元素-abbr-acronym-sub-sup-kbd-etc"><a href="#其他元素-abbr-acronym-sub-sup-kbd-etc" class="headerlink" title="其他元素 - abbr, acronym, sub, sup, kbd, etc."></a>其他元素 - abbr, acronym, sub, sup, kbd, etc.</h3><p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. <abbr title="Avenue">AVE</abbr>. Use <kbd>Crtl</kbd> + <kbd>C</kbd> to stop.</p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><img src="https://d-sketon.top/img/backwebp/bg1.webp" alt="image"></p>
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><hr>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#x27;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">enum</span> <span class="title class_">State</span> &#123;</span><br><span class="line">    Start,</span><br><span class="line">    Transient,</span><br><span class="line">    Closed,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">From</span>&lt;&amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>&gt; <span class="keyword">for</span> <span class="title class_">State</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">from</span>(s: &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">match</span> s &#123;</span><br><span class="line">            <span class="string">&quot;start&quot;</span> =&gt; State::Start,</span><br><span class="line">            <span class="string">&quot;closed&quot;</span> =&gt; State::Closed,</span><br><span class="line">            _ =&gt; <span class="built_in">unreachable!</span>(),</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;apples&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;count&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">12000</span><span class="punctuation">,</span> <span class="number">20000</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;...&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;sensitive&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span> <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;oranges&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;count&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="number">17500</span><span class="punctuation">,</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;...&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;sensitive&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span> <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">somefunc</span>(<span class="params">param1=<span class="string">&#x27;&#x27;</span>, param2=<span class="number">0</span></span>):</span><br><span class="line">    <span class="string">r&#x27;&#x27;&#x27;A docstring&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></span><br><span class="line">        <span class="built_in">print</span> <span class="string">&#x27;Gre\&#x27;ater&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span> + <span class="number">0b10l</span>) <span class="keyword">or</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SomeClass</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">&#x27;&#x27;&#x27;interpreter</span></span><br><span class="line"><span class="string"><span class="meta">... </span>prompt&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">body</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">500px</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;application/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">function</span> <span class="title function_">$init</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> <span class="literal">true</span>;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">checked</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span> <span class="attr">id</span>=<span class="string">&quot;title&quot;</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- here goes the rest of the page --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">$initHighlight</span>(<span class="params">block, cls</span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (cls.<span class="title function_">search</span>(<span class="regexp">/\bno\-highlight\b/</span>) != -<span class="number">1</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">process</span>(block, <span class="literal">true</span>, <span class="number">0x0F</span>) +</span><br><span class="line">             <span class="string">` class=&quot;<span class="subst">$&#123;cls&#125;</span>&quot;`</span>;</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    <span class="comment">/* handle exception */</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> / <span class="number">2</span>; i &lt; classes.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_">checkCondition</span>(classes[i]) === <span class="literal">undefined</span>)</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;undefined&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">web-component</span>&gt;</span>&#123;block&#125;<span class="tag">&lt;/<span class="name">web-component</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> $initHighlight;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* An annoying &quot;Hello World&quot; example */</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> i = <span class="number">0</span>; i &lt; <span class="number">0xFFFF</span>; i++)</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Hello, World!&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">  <span class="type">char</span> c = <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">  unordered_map &lt;string, vector&lt;string&gt; &gt; m;</span><br><span class="line">  m[<span class="string">&quot;key&quot;</span>] = <span class="string">&quot;\\\\&quot;</span>; <span class="comment">// this is an error</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">-2e3</span> + <span class="number">12l</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &quot;topic&quot; (</span><br><span class="line">    &quot;id&quot; serial <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    &quot;forum_id&quot; <span class="type">integer</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    &quot;subject&quot; <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">);</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &quot;topic&quot;</span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> forum_id <span class="keyword">FOREIGN</span> KEY (&quot;forum_id&quot;)</span><br><span class="line"><span class="keyword">REFERENCES</span> &quot;forum&quot; (&quot;id&quot;);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Initials</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> &quot;topic&quot; (&quot;forum_id&quot;, &quot;subject&quot;)</span><br><span class="line"><span class="keyword">values</span> (<span class="number">2</span>, <span class="string">&#x27;D&#x27;&#x27;artagnian&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="string">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="string">&quot;Dependency.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">WorldDataSource</span></span></span><br><span class="line"><span class="keyword">@optional</span></span><br><span class="line">- (<span class="built_in">NSString</span>*)worldName;</span><br><span class="line"><span class="keyword">@required</span></span><br><span class="line">- (<span class="type">BOOL</span>)allowsToLive;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readonly</span>) <span class="built_in">NSString</span> *title;</span><br><span class="line">- (<span class="keyword">IBAction</span>) show;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> John Smith &lt;john.smith@example.com&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">package</span> l2f.gameserver.model;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">L2Char</span> <span class="keyword">extends</span> <span class="title class_">L2Object</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Short</span> <span class="variable">ERROR</span> <span class="operator">=</span> <span class="number">0x0001</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">moveTo</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, <span class="type">int</span> z)</span> &#123;</span><br><span class="line">    _ai = <span class="literal">null</span>;</span><br><span class="line">    log(<span class="string">&quot;Should not be called&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> &gt; <span class="number">5</span>) &#123; <span class="comment">// wtf!?</span></span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="keyword">@objc</span> <span class="keyword">class</span> <span class="title class_">Person</span>: <span class="title class_ inherited__">Entity</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> name: <span class="type">String</span>!</span><br><span class="line">  <span class="keyword">var</span> age:  <span class="type">Int</span>!</span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(<span class="params">name</span>: <span class="type">String</span>, <span class="params">age</span>: <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="comment">/* <span class="comment">/* ... */</span> */</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Return a descriptive string for this person</span></span><br><span class="line">  <span class="keyword">func</span> <span class="title function_">description</span>(<span class="params">offset</span>: <span class="type">Int</span> <span class="operator">=</span> <span class="number">0</span>) -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;<span class="subst">\(name)</span> is <span class="subst">\(age <span class="operator">+</span> offset)</span> years old&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Chunkfive;</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;Chunkfive.otf&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-class">.usertext</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#f0f0f0</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#600</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Chunkfive, sans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css);</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="selector-tag">a</span><span class="selector-attr">[href^=<span class="string">&quot;http&quot;</span>]</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(href);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The Greeter class</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Greeter</span></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">initialize</span>(<span class="params">name</span>)</span><br><span class="line">    <span class="variable">@name</span> = name.capitalize</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">def</span> <span class="title function_">salute</span></span><br><span class="line">    puts <span class="string">&quot;Hello <span class="subst">#&#123;<span class="variable">@name</span>&#125;</span>!&quot;</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">g = <span class="title class_">Greeter</span>.new(<span class="string">&quot;world&quot;</span>)</span><br><span class="line">g.salute</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Makefile</span></span><br><span class="line"></span><br><span class="line">BUILDDIR      = _build</span><br><span class="line">EXTRAS       ?= <span class="variable">$(BUILDDIR)</span>/extras</span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: main clean</span></span><br><span class="line"></span><br><span class="line"><span class="section">main:</span></span><br><span class="line">gradient-light@echo <span class="string">&quot;Building main facility...&quot;</span></span><br><span class="line">gradient-lightbuild_main <span class="variable">$(BUILDDIR)</span></span><br><span class="line"></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">gradient-lightrm -rf <span class="variable">$(BUILDDIR)</span>/*</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">float64</span>)</span><br><span class="line">    ch &lt;- <span class="number">1.0e10</span>    <span class="comment">// magic number</span></span><br><span class="line">    x, ok := &lt;- ch</span><br><span class="line">    <span class="keyword">defer</span> fmt.Println(<span class="string">`exitting now\`</span>)</span><br><span class="line">    <span class="keyword">go</span> <span class="built_in">println</span>(<span class="built_in">len</span>(<span class="string">&quot;hello world!&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">###### CONFIG</span></span><br><span class="line">ACCEPTED_HOSTS=<span class="string">&quot;/root/.hag_accepted.conf&quot;</span></span><br><span class="line">BE_VERBOSE=<span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$UID</span>&quot;</span> -ne 0 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Superuser rights required&quot;</span></span><br><span class="line">  <span class="built_in">exit</span> 2</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">genApacheConf</span></span>()&#123;</span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">&quot;# Host <span class="variable">$&#123;HOME_DIR&#125;</span><span class="variable">$1</span>/<span class="variable">$2</span> :&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">; boilerplate</span></span><br><span class="line"><span class="section">[package]</span></span><br><span class="line"><span class="attr">name</span> = <span class="string">&quot;some_name&quot;</span></span><br><span class="line"><span class="attr">authors</span> = [<span class="string">&quot;Author&quot;</span>]</span><br><span class="line"><span class="attr">description</span> = <span class="string">&quot;This is \</span></span><br><span class="line"><span class="string">a description&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[[lib]]</span></span><br><span class="line"><span class="attr">name</span> = <span class="variable">$&#123;NAME&#125;</span></span><br><span class="line"><span class="attr">default</span> = <span class="literal">True</span></span><br><span class="line"><span class="attr">auto</span> = <span class="literal">no</span></span><br><span class="line"><span class="attr">counter</span> = <span class="number">1_000</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h2><h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a target="_blank" rel="noopener" href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>
+
+<h3 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h3><h4 id="带有标题和-URL"><a href="#带有标题和-URL" class="headerlink" title="带有标题和 URL"></a>带有标题和 URL</h4><figure class="highlight plaintext"><figcaption><span>.compact</span><a target="_blank" rel="noopener" href="http://underscorejs.org/#compact">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.compact([0, 1, false, 2, ‘’, 3]);</span><br><span class="line">=&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<h4 id="带有选中行"><a href="#带有选中行" class="headerlink" title="带有选中行"></a>带有选中行</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line marked"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">&#x27;127.0.0.1&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line marked">  res.<span class="title function_">writeHead</span>(<span class="number">200</span>, &#123; <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/plain&#x27;</span> &#125;);</span><br><span class="line marked">  res.<span class="title function_">end</span>(<span class="string">&#x27;Hello World\n&#x27;</span>);</span><br><span class="line">&#125;).<span class="title function_">listen</span>(port, hostname, <span class="function">() =&gt;</span> &#123;</span><br><span class="line marked">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Pull-Quote"><a href="#Pull-Quote" class="headerlink" title="Pull Quote"></a>Pull Quote</h3><blockquote class="pullquote left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus molestie arcu, et fringilla mauris placerat ac. Nullam luctus bibendum risus. Ut cursus sed ipsum feugiat egestas. Suspendisse elementum, velit eu consequat consequat, augue lorem dapibus libero, eget pulvinar dolor est sit amet nulla. Suspendisse a porta tortor, et posuere mi. Pellentesque ultricies, mi quis volutpat malesuada, erat felis vulputate nisl, ac congue ante tortor ut ante. Proin aliquam sem vel mauris tincidunt, eget scelerisque tortor euismod. Nulla tincidunt enim nec commodo dictum. Mauris id sapien et orci gravida luctus id ut dui. In vel vulputate odio. Duis vel turpis molestie, scelerisque enim eu, lobortis eros. Cras at ipsum gravida, sagittis ante vel, viverra tellus. Nunc mauris turpis, elementum ullamcorper nisl pretium, ultrices cursus justo. Mauris porttitor commodo eros, ac ornare orci interdum in. Cras fermentum cursus leo sed mattis. In dignissim lorem sem, sit amet elementum mauris venenatis ac.</p>
+<blockquote class="pullquote right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula justo, lobortis sit amet semper vel, dignissim sit amet libero. Praesent ac tempus ligula. Maecenas at gravida odio. Etiam tristique volutpat lacus eu faucibus. Donec non tempus arcu. Phasellus adipiscing, mauris nec mollis egestas, ipsum nunc auctor velit, et rhoncus lorem ipsum at ante. Praesent et sem in velit volutpat auctor. Duis vel mauris nulla. Maecenas mattis interdum ante, quis sagittis nibh cursus et. Nulla facilisi. Morbi convallis gravida tortor, ut fermentum enim gravida et. Nunc vel dictum nisl, non ultrices libero. Proin vestibulum felis eget orci consectetur lobortis. Vestibulum augue nulla, iaculis vitae augue vehicula, dignissim ultrices libero. Sed imperdiet urna et quam ultrices tincidunt nec ac magna. Etiam vel pharetra elit.</p>
+<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>$f(n) &#x3D; \Theta(g(n)) \land g(n) &#x3D; \Theta(h(n)) \rightarrow f(n) &#x3D; \Theta(h(n))$</p>
+<p>$\omega(g(n))&#x3D;{f(n):\text{存在正常量}c\text{和}n_0\text{，使得对所有}n \geq n_0\text{，有}0\leq cg(n) &lt; f(n)}$</p>
+<p>$$<br>f^{(i)}(n) &#x3D;<br>\begin{cases}<br>n \qquad &amp; i &#x3D; 1 \<br>f(f^{(i-1)}(n)) \qquad &amp;  i&gt;1<br>\end{cases}<br>$$</p>
+<p>$$<br>A &#x3D; \begin{bmatrix}<br>A_{11} &amp; A_{12} \<br>A_{21} &amp; A_{22}<br>\end{bmatrix}<br>,<br>B &#x3D; \begin{bmatrix}<br>B_{11} &amp; B_{12} \<br>B_{21} &amp; B_{22}<br>\end{bmatrix}<br>,<br>C &#x3D; \begin{bmatrix}<br>C_{11} &amp; C_{12} \<br>C_{21} &amp; C_{22}<br>\end{bmatrix}<br>$$</p>
+<p>$$\sum^{\lfloor lgn \rfloor}<em>{h&#x3D;0} \lceil \frac{n}{2^{h+1}} \rceil O(h) &#x3D; O(n \sum^{\lfloor lgn \rfloor}</em>{h&#x3D;0} \frac{h}{2^h}) &#x3D;  O(n \sum^{\infty}_{h&#x3D;0} \frac{h}{2^h}) &#x3D;O(n)$$</p>
+<p>$$<br>\begin{align}<br>&amp;\underset{\boldsymbol{w}}{\min}\sum_{i&#x3D;1}^N{\left( \boldsymbol{p}_i\boldsymbol{w} \right) ^2 },,, s.t. ,\left| \boldsymbol{w} \right| _2&#x3D;1 \notag<br>\<br>\Rightarrow &amp;\underset{\boldsymbol{w}}{\min},,\boldsymbol{w}^T\boldsymbol{P}^T\boldsymbol{Pw},,, s.t., \boldsymbol{w}^T\boldsymbol{w}&#x3D;1<br>\end{align}<br>$$</p>
+<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><pre class="mermaid">  sequenceDiagram
+  participant 客户端
+  participant 代理对象
+  participant 代理处理器
+  participant 目标对象
+  客户端->>代理对象:调用方法
+  代理对象->>代理处理器:转发代理处理器<br>Invoke()方法
+  代理处理器->>目标对象:判断Method<br>调用目标对象的方法
+  目标对象->>代理处理器:返回结果
+  代理处理器->>代理对象:返回结果
+  代理对象->>客户端:返回结果</pre>
+
+<pre class="mermaid">  graph LR
+  c1[Client1<br>Socket]--客户端发出连接-->ss[ServerSocket]
+  c2[Client2<br>Socket]--客户端发出连接-->ss[ServerSocket]
+  ss--服务器接受请求并创建新的Socket-->s1[为Client1创<br>建的Socket]
+  ss--服务器接受请求并创建新的Socket-->s2[为Client2创<br>建的Socket]
+  c1--两个Socket间建立专线连接-->s1
+  c2--两个Socket间建立专线连接-->s2</pre>
+
+<h2 id="卡片"><a href="#卡片" class="headerlink" title="卡片"></a>卡片</h2><div class="post-link-card-wrap">
+    <div class="post-link-card">
+      <a href="/2024/11/29/hexo-theme-reimu%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" title="hexo-theme-reimu效果展示(fork)"></a>
+      <div class="post-link-card-cover-wrap"><img src="/images/anime.webp" class="no-lightbox" title="hexo-theme-reimu效果展示(fork)" alt="hexo-theme-reimu效果展示(fork)"/></div>
+      <div class="post-link-card-item-wrap">
+        <div class="post-link-card-title">hexo-theme-reimu效果展示(fork)</div>
+        <div class="post-link-card-excerpt">hexo-theme-reimu效果展示</div>
+      </div>
+    </div>
+  </div>
+
+<div class="post-link-card-wrap">
+    <div class="post-link-card">
+      <a href="https://github.com/D-Sketon/hexo-theme-reimu" title="Github" rel="noopener external nofollow noreferrer" target="_blank"></a>
+      <div class="post-link-card-cover-wrap"><img src="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png" class="no-lightbox" title="Github" alt="Github"/></div>
+      <div class="post-link-card-item-wrap">
+        <div class="post-link-card-title">Github</div>
+        <div class="post-link-card-excerpt"><span class="icon-link"></span>https://github.com/D-Sketon/hexo-theme-reimu</div>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9/" rel="tag">测试内容</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="/covers/123.png" data-sizes="auto" alt="SD-如何训练正负滑块差异丹" class="lazyload">
+          
+        
+        <a href="/2024/12/13/%E5%A6%82%E4%BD%95%E8%AE%AD%E7%BB%83%E5%B7%AE%E5%BC%82%E4%B8%B9/"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+          
+            SD-如何训练正负滑块差异丹
+          
+        </h3>
+      </div>
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/covers/123.png" data-sizes="auto" alt="如何给网页添加Live2D看板娘" class="lazyload">
+        
+      
+      <a href="/2024/11/28/Live2D/"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+        
+          如何给网页添加Live2D看板娘
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+  <div id="comments" class="gscomment giscus" data-aos="fade-up"></div>
+
+
+</section>
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E6%9D%A5%E8%87%AAreimu%E4%B8%BB%E9%A2%98%E4%BD%9C%E8%80%85D-Sketon"><span class="toc-number">1.</span> <span class="toc-text">以下内容来自reimu主题作者D-Sketon</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">Markdown 基本元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#H1"><span class="toc-number">2.</span> <span class="toc-text">H1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#H2"><span class="toc-number">2.1.</span> <span class="toc-text">H2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#H3"><span class="toc-number">2.1.1.</span> <span class="toc-text">H3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#H4"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">H4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H5"><span class="toc-number">2.1.1.1.1.</span> <span class="toc-text">H5</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#H6"><span class="toc-number">2.1.1.1.1.1.</span> <span class="toc-text">H6</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E8%B0%83"><span class="toc-number">2.1.2.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">2.1.3.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Definition-List-dl"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Definition List (dl)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ordered-List-ol"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Ordered List (ol)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unordered-List-ul"><span class="toc-number">2.1.3.3.</span> <span class="toc-text">Unordered List (ul)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">2.1.4.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.1.5.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0-abbr-acronym-sub-sup-kbd-etc"><span class="toc-number">2.1.6.</span> <span class="toc-text">其他元素 - abbr, acronym, sub, sup, kbd, etc.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">2.1.7.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="toc-number">2.1.8.</span> <span class="toc-text">分隔线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">2.2.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">标签插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="toc-number">2.3.1.</span> <span class="toc-text">引用块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97-1"><span class="toc-number">2.3.2.</span> <span class="toc-text">代码块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E6%A0%87%E9%A2%98%E5%92%8C-URL"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">带有标题和 URL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E9%80%89%E4%B8%AD%E8%A1%8C"><span class="toc-number">2.3.2.2.</span> <span class="toc-text">带有选中行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pull-Quote"><span class="toc-number">2.3.3.</span> <span class="toc-text">Pull Quote</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">2.4.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">2.5.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%A1%E7%89%87"><span class="toc-number">2.6.</span> <span class="toc-text">卡片</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="makki" class="lazyload">
+  <div class="sidebar-author-name">makki</div>
+  <div class="sidebar-description">她的头发，是被爱染红的蓝色</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/jaminGH itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/429940799 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/bangumis" aria-label="追番"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">追番</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2024-2025
+      <span class="footer-info-sep rotate"></span>
+      makki
+    </div>
+    
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        4k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:20
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E6%9D%A5%E8%87%AAreimu%E4%B8%BB%E9%A2%98%E4%BD%9C%E8%80%85D-Sketon"><span class="toc-number">1.</span> <span class="toc-text">以下内容来自reimu主题作者D-Sketon</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">Markdown 基本元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#H1"><span class="toc-number">2.</span> <span class="toc-text">H1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#H2"><span class="toc-number">2.1.</span> <span class="toc-text">H2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#H3"><span class="toc-number">2.1.1.</span> <span class="toc-text">H3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#H4"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">H4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H5"><span class="toc-number">2.1.1.1.1.</span> <span class="toc-text">H5</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#H6"><span class="toc-number">2.1.1.1.1.1.</span> <span class="toc-text">H6</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E8%B0%83"><span class="toc-number">2.1.2.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">2.1.3.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Definition-List-dl"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Definition List (dl)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ordered-List-ol"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Ordered List (ol)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unordered-List-ul"><span class="toc-number">2.1.3.3.</span> <span class="toc-text">Unordered List (ul)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">2.1.4.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.1.5.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0-abbr-acronym-sub-sup-kbd-etc"><span class="toc-number">2.1.6.</span> <span class="toc-text">其他元素 - abbr, acronym, sub, sup, kbd, etc.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">2.1.7.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="toc-number">2.1.8.</span> <span class="toc-text">分隔线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">2.2.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">标签插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="toc-number">2.3.1.</span> <span class="toc-text">引用块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97-1"><span class="toc-number">2.3.2.</span> <span class="toc-text">代码块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E6%A0%87%E9%A2%98%E5%92%8C-URL"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">带有标题和 URL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E9%80%89%E4%B8%AD%E8%A1%8C"><span class="toc-number">2.3.2.2.</span> <span class="toc-text">带有选中行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pull-Quote"><span class="toc-number">2.3.3.</span> <span class="toc-text">Pull Quote</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">2.4.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">2.5.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%A1%E7%89%87"><span class="toc-number">2.6.</span> <span class="toc-text">卡片</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="makki" class="lazyload">
+  <div class="sidebar-author-name">makki</div>
+  <div class="sidebar-description">她的头发，是被爱染红的蓝色</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/jaminGH itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/429940799 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/bangumis" aria-label="追番"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">追番</div>
+      </div>
+    
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+      
+<script src="https://npm.webcache.cn/mermaid@9.4.3/dist/mermaid.min.js" integrity="sha384-aG3Gai4tbCHF0iXo48HwLoOZyut7mBl50oMC9GD1m75xyHfJDv6w8hD&#x2F;kZRD47aJ" crossorigin="anonymous" data-pjax></script>
+
+      <script data-pjax>
+        if (window.mermaid) {
+          // https://github.com/mermaid-js/mermaid/issues/1945
+          const elementCode = '.mermaid'
+          const saveOriginalData = () => {
+            return new Promise((resolve, reject) => {
+              try {
+                let els = _$$(elementCode),
+                    count = els.length;
+                els.forEach(element => {
+                  if (element.getAttribute('data-original-code') == null){
+                    element.setAttribute('data-original-code', element.innerHTML)
+                  }
+                  count--
+                  if(count == 0){
+                    resolve()
+                  }
+                });
+              } catch (error) {
+              reject(error) 
+              }
+            })
+          }
+          const resetProcessed = () => {
+            return new Promise((resolve, reject) => {
+              try {
+                let els = _$$(elementCode),
+                    count = els.length;
+                els.forEach(element => {
+                  if(element.getAttribute('data-original-code') != null){
+                    element.removeAttribute('data-processed')
+                    element.innerHTML = element.getAttribute('data-original-code')
+                  }
+                  count--
+                  if(count == 0){
+                    resolve()
+                  }
+                });
+              } catch (error) {
+              reject(error) 
+              }
+            })
+          } 
+          const loadMermaid = (theme) => {
+            window.mermaid.initialize({theme})
+            window.mermaid.init({theme}, _$$(elementCode))
+          }
+          document.body.addEventListener('dark-theme-set', () => {
+            saveOriginalData()
+            .then(resetProcessed())
+            .then(loadMermaid('dark'))
+            .catch(console.error)
+          })
+          document.body.addEventListener('light-theme-set', () => {
+            saveOriginalData()
+            .then(resetProcessed())
+            .then(loadMermaid('default'))
+            .catch(console.error)
+          })
+          if(localStorage.getItem('dark_mode') == 'true') {
+            saveOriginalData()
+            .then(resetProcessed())
+            .then(loadMermaid('dark'))
+            .catch(console.error)
+          } else {
+            saveOriginalData()
+            .then(resetProcessed())
+            .then(loadMermaid('default'))
+            .catch(console.error)
+          }
+        }
+      </script>
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+  <script data-pjax>
+    var giscusContainer = document.querySelector('.giscus');
+    if (giscusContainer) {
+      const giscusScript = document.createElement('script');
+      const domMode = document.documentElement.getAttribute("data-theme");
+      giscusScript.src = 'https://giscus.app/client.js';
+      giscusScript.setAttribute('data-repo', 'blog.pipbest.com');
+      giscusScript.setAttribute('data-repo-id', 'R_kgDONUWRzg');
+      giscusScript.setAttribute('data-category', 'Announcements'); 
+      giscusScript.setAttribute('data-category-id', 'DIC_kwDONUWRzs4Ckntw');
+      giscusScript.setAttribute('data-mapping', '0');
+      giscusScript.setAttribute('data-strict', '0');
+      giscusScript.setAttribute('data-reactions-enabled', '1');
+      giscusScript.setAttribute('data-emit-metadata', '0');
+      giscusScript.setAttribute('data-input-position', 'bottom');
+      giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
+      giscusScript.setAttribute('data-lang', 'zh-CN');
+      giscusScript.setAttribute('crossorigin', 'anonymous');
+      giscusScript.async = true;
+      giscusContainer.appendChild(giscusScript);
+      document.body.addEventListener('light-theme-set', () => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: 'light' } } }, 'https://giscus.app');
+      });
+      document.body.addEventListener('dark-theme-set', () => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: 'dark' } } }, 'https://giscus.app');
+      });
+    }
+  </script>
+
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.1.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+  
+    
+<script src="https://npm.webcache.cn/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6&#x2F;1Nxveei" crossorigin="anonymous" defer data-pjax></script>
+
+    <script data-pjax>
+      window.MathJax = {"tex":{"tags":"ams","useLabelIds":true,"inlineMath":[["$","$"],["\\\\(","\\\\)"]],"displayMath":[["$$","$$"],["\\\\[","\\\\]"]],"processEscapes":true,"processEnvironments":true,"autoload":{"color":[],"colorv2":["color"]},"packages":{"[+]":["noerrors"]}},"options":{"skipHtmlTags":["script","noscript","style","textarea","pre","code"],"ignoreHtmlClass":"tex2jax_ignore","processHtmlClass":"tex2jax_process"},"loader":{"load":["input/asciimath","[tex]/noerrors"]}};
+    </script>
+  
+
+
+  <!-- hexo injector body_end start --><script data-pjax src="/pluginsSrc/oh-my-live2d/dist/index.min.js"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"left",source:"",libraryUrls:{"complete":"https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/complete.js","cubism2":"https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism2.js","cubism5":"https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism5.js"},mobileDisplay:true,models:[{"path":"/xilin2.1/model.json","mobilePosition":[-30,-10],"mobileScale":0.05,"mobileStageStyle":{"width":90,"height":83},"motionPreloadStrategy":"IDLE","position":[-120,-80],"scale":0.15,"stageStyle":{"width":250,"height":250}}],parentElement:document.body,primaryColor:"var(--btn-bg)",sayHello:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":180,"height":80,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15000,message:function(){
+  return axios.get('https://v1.hitokoto.cn?c=i')
+    .then(function (response) {
+      return response.data.hitokoto ;
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
+}}});</script><!-- hexo injector body_end end --></body>
+  </html>
+
